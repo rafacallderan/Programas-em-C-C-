@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void digitaVetor(int va[], int vb[], int tamanho);
+int produtoEscalar(int va[], int vb[], int tamanho);
+void imprimeVetor(int va[], int vb[], int tamanho);
+
+
+int main(){
+    int veta[3];
+    int vetb[3];
+    
+    int result;
+    
+	digitaVetor(veta, vetb, 3);
+	
+
+    imprimeVetor(veta, vetb, 3);
+    
+    printf("\n");
+    
+    result = produtoEscalar(veta, vetb, 3);
+    	printf("\n produto esclar = %d", result);
+}
+
+
+
+
+void digitaVetor(int va[], int vb[], int tamanho) {
+    
+    for (int i = 0; i < tamanho; i++){
+	printf("Digite os numeros para o vetor A:  ", i);
+	scanf("%d",&va[i]);
+	}
+	
+	printf("\n");
+	
+	for (int i = 0; i < tamanho; i++){
+	printf(" Digite os numeros para o vetor B:  ", i);
+	scanf("%d",&vb[i]);
+	}
+		
+}
+
+
+
+int produtoEscalar(int va[], int vb[], int tamanho ){
+	int p;
+	p = va[1] * vb[1] + va[2] * vb[2] + va[3] * vb[3];
+
+return p;
+}
+	
+	
+	
+	
+		
+	
+void imprimeVetor(int va[], int vb[], int tamanho) {
+    int i;
+    for (i = 0; i < tamanho; i++) {
+		printf("\n Vetor A: %d  vetor B: %d", va[i], vb[i]);
+	
+    }
+}	
+	
